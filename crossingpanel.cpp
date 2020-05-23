@@ -93,6 +93,11 @@ void CrossingPanel::editRequested()
     area.day = dialog->getDay();
     area.night = dialog->getNight();
 
+    QFont font;
+    font.setBold(true);
+    font.setPixelSize(14);
+    ui->wrap->setFont(font);
+
     updateComponents();
     emit panelUpdate();
 }
