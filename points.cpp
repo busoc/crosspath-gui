@@ -19,6 +19,6 @@ QString toDMS(double pt)
     {
         sec = -sec;
     }
-    return QString("%1° %2' %3''").arg(int(deg)).arg(int(min)).arg(sec, 0, 'f', 2);
+    return QString("%1° %2' %3''").arg(int(deg)).arg(int(min), 2, 10, QChar('0')).arg(sec, 0, 'f', 2);
 }
 
