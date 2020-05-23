@@ -38,6 +38,7 @@ public slots:
     void pathFound(Path p);
     void removeRequested();
     void editRequested();
+    void refreshRequested();
     void updateDMS(bool dhm);
 
 private slots:

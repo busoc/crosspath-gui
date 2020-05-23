@@ -13,10 +13,9 @@ CrossingPanel::CrossingPanel(QWidget *parent) :
     ui(new Ui::CrossingPanel)
 {
     ui->setupUi(this);
+    ui->menu->addAction(ui->actionEdit);
+    ui->menu->addAction(ui->actionRem);
     ui->progress->hide();
-
-    connect(ui->btnRem, SIGNAL(click()), this, SLOT(removeRequested()));
-    connect(ui->btnEdit, SIGNAL(click()), this, SLOT(editRequested()));
 }
 
 CrossingPanel::CrossingPanel(Area a, QWidget *parent) :
@@ -27,10 +26,17 @@ CrossingPanel::CrossingPanel(Area a, QWidget *parent) :
 {
     ui->setupUi(this);
     setupCrossing();
+    ui->menu->addAction(ui->actionEdit);
+    ui->menu->addAction(ui->actionRefresh);
+
+    ui->menu->addAction(ui->actionRem);
+
+
     updateComponents();
 
-    connect(ui->btnRem, SIGNAL(clicked()), this, SLOT(removeRequested()));
-    connect(ui->btnEdit, SIGNAL(clicked()), this, SLOT(editRequested()));
+    connect(ui->actionRem, SIGNAL(triggered()), this, SLOT(removeRequested()));
+    connect(ui->actionEdit, SIGNAL(triggered()), this, SLOT(editRequested()));
+    connect(ui->actionRefresh, SIGNAL(triggered()), this, SLOT(refreshRequested()));
 }
 
 CrossingPanel::~CrossingPanel()
@@ -46,8 +52,6 @@ void CrossingPanel::stopWorker()
             worker->requestInterruption();
             worker->wait();
             delete worker;
-
-            running = false;
     }
 }
 
@@ -79,6 +83,11 @@ void CrossingPanel::updateComponents(bool dhm)
     ui->to->setText(area.dtend.toString("yyyy-MM-dd hh:mm:ss"));
 
     ui->wrap->setTitle(area.label);
+}
+
+void CrossingPanel::refreshRequested()
+{
+    emit panelUpdate();
 }
 
 void CrossingPanel::editRequested()
