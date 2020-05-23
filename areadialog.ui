@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AreaDialog</class>
+ <widget class="QDialog" name="AreaDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>278</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>100000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Edit Area</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Label</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="area"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Latitude</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="latitude">
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-90.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>90.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_1">
+         <property name="text">
+          <string>Longitude</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="longitude">
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-90.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>90.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Margin</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="margin">
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="maximum">
+          <double>90.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>2.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>From</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QDateTimeEdit" name="dtstart">
+         <property name="dateTime">
+          <datetime>
+           <hour>0</hour>
+           <minute>0</minute>
+           <second>0</second>
+           <year>2018</year>
+           <month>4</month>
+           <day>1</day>
+          </datetime>
+         </property>
+         <property name="date">
+          <date>
+           <year>2018</year>
+           <month>4</month>
+           <day>1</day>
+          </date>
+         </property>
+         <property name="time">
+          <time>
+           <hour>0</hour>
+           <minute>0</minute>
+           <second>0</second>
+          </time>
+         </property>
+         <property name="maximumDateTime">
+          <datetime>
+           <hour>23</hour>
+           <minute>59</minute>
+           <second>59</second>
+           <year>2100</year>
+           <month>12</month>
+           <day>31</day>
+          </datetime>
+         </property>
+         <property name="minimumDateTime">
+          <datetime>
+           <hour>0</hour>
+           <minute>0</minute>
+           <second>0</second>
+           <year>1970</year>
+           <month>1</month>
+           <day>1</day>
+          </datetime>
+         </property>
+         <property name="displayFormat">
+          <string>yyyy/MM/dd HH:mm:ss</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>To</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QDateTimeEdit" name="dtend">
+         <property name="date">
+          <date>
+           <year>2022</year>
+           <month>4</month>
+           <day>1</day>
+          </date>
+         </property>
+         <property name="maximumDateTime">
+          <datetime>
+           <hour>23</hour>
+           <minute>59</minute>
+           <second>59</second>
+           <year>2100</year>
+           <month>12</month>
+           <day>31</day>
+          </datetime>
+         </property>
+         <property name="minimumDateTime">
+          <datetime>
+           <hour>0</hour>
+           <minute>0</minute>
+           <second>0</second>
+           <year>1970</year>
+           <month>1</month>
+           <day>1</day>
+          </datetime>
+         </property>
+         <property name="displayFormat">
+          <string>yyyy/MM/ddHH:mm:ss</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QRadioButton" name="both">
+           <property name="text">
+            <string>Both</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="nightOnly">
+           <property name="text">
+            <string>Night</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="dayOnly">
+           <property name="text">
+            <string>Day</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>area</tabstop>
+  <tabstop>latitude</tabstop>
+  <tabstop>longitude</tabstop>
+  <tabstop>dtstart</tabstop>
+  <tabstop>dtend</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>AreaDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>AreaDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>
