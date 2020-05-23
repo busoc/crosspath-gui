@@ -16,6 +16,12 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="font">
+   <font>
+    <family>Liberation Sans</family>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -50,6 +56,9 @@
             <property name="topMargin">
              <number>0</number>
             </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <spacer name="horizontalSpacer">
               <property name="orientation">
@@ -68,6 +77,12 @@
             </item>
             <item>
              <widget class="QToolButton" name="menu">
+              <property name="font">
+               <font>
+                <family>Liberation Sans</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>...</string>
               </property>
@@ -88,6 +103,15 @@
             </property>
             <property name="formAlignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="verticalSpacing">
+             <number>7</number>
+            </property>
+            <property name="rightMargin">
+             <number>7</number>
+            </property>
+            <property name="bottomMargin">
+             <number>7</number>
             </property>
             <item row="0" column="0">
              <widget class="QLabel" name="label_1">
@@ -118,7 +142,8 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>8</pointsize>
+                <family>Liberation Sans</family>
+                <pointsize>9</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -161,7 +186,8 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>8</pointsize>
+                <family>Liberation Sans</family>
+                <pointsize>9</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -204,7 +230,8 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>8</pointsize>
+                <family>Liberation Sans</family>
+                <pointsize>9</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -247,7 +274,8 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>8</pointsize>
+                <family>Liberation Sans</family>
+                <pointsize>9</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -290,7 +318,8 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>8</pointsize>
+                <family>Liberation Sans</family>
+                <pointsize>9</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -311,6 +340,12 @@
                 <width>90</width>
                 <height>0</height>
                </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Liberation Sans</family>
+                <pointsize>9</pointsize>
+               </font>
               </property>
               <property name="text">
                <string>To</string>
@@ -333,7 +368,8 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>8</pointsize>
+                <family>Liberation Sans</family>
+                <pointsize>9</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -353,6 +389,9 @@
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
