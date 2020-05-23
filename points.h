@@ -136,6 +136,8 @@ public:
     };
 };
 
+QString toDMS(double pt);
+
 Q_DECLARE_METATYPE(Path);
 
 #endif // POINTS_H

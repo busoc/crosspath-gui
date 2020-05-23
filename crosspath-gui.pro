@@ -19,6 +19,7 @@ SOURCES += \
     areadialog.cpp \
     crossingpanel.cpp \
     datetimedelegate.cpp \
+    dhmdelegate.cpp \
     infopanel.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     areadialog.h \
     crossingpanel.h \
     datetimedelegate.h \
+    dhmdelegate.h \
     infopanel.h \
     mainwindow.h \
     points.h \

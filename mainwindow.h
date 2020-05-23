@@ -28,9 +28,11 @@ public slots:
     void toggleFullscreen();
     void closePanel();
     void updatePanel();
+    void toggleCoordinates();
 
 signals:
     void fileChanged(QString file);
+    void toggleCoordinates(bool dhm);
 
 protected:
     void closeEvent(QCloseEvent *event);

@@ -51,6 +51,8 @@ void MainWindow::setupMenus()
     ui->menuEdit->addSeparator();
     ui->menuEdit->addAction(ui->actionStats);
 
+    ui->menuView->addAction(ui->actionDHM);
+    ui->menuView->addSeparator();
     ui->menuView->addAction(ui->actionScreen);
 
     ui->menuhelp->addAction(ui->actionHelp);
@@ -62,6 +64,7 @@ void MainWindow::setupMenus()
     connect(ui->actionStats, SIGNAL(triggered()), this, SLOT(showStats()));
     connect(ui->actionHelp, SIGNAL(triggered()), this, SLOT(showHelp()));
     connect(ui->actionScreen, SIGNAL(triggered()), this, SLOT(toggleFullscreen()));
+    connect(ui->actionDHM, SIGNAL(triggered()), this, SLOT(toggleCoordinates()));
 
     ui->actionReload->setEnabled(false);
     ui->actionStats->setEnabled(false);
@@ -120,6 +123,7 @@ void MainWindow::readSettings()
         connect(this, SIGNAL(fileChanged(QString)), panel, SLOT(updatePaths(QString)));
         connect(panel, SIGNAL(panelClose()), this, SLOT(closePanel()));
         connect(panel, SIGNAL(panelUpdate()), this, SLOT(updatePanel()));
+        connect(this, SIGNAL(toggleCoordinates(bool)), panel, SLOT(updateDMS(bool)));
         panel->updatePaths(trajectory);
     }
     settings.endArray();
@@ -135,6 +139,11 @@ void MainWindow::readSettings()
         ui->actionReload->setEnabled(true);
         ui->actionStats->setEnabled(true);
     }
+}
+
+void MainWindow::toggleCoordinates()
+{
+    emit toggleCoordinates(ui->actionDHM->isChecked());
 }
 
 void MainWindow::updateRecentFiles()
@@ -223,7 +232,6 @@ void MainWindow::openRecentFile()
     }
 }
 
-
 void MainWindow::openFile()
 {
     QString dir = QDir::homePath();
@@ -284,6 +292,7 @@ void MainWindow::createArea()
         connect(this, SIGNAL(fileChanged(QString)), panel, SLOT(updatePaths(QString)));
         connect(panel, SIGNAL(panelClose()), this, SLOT(closePanel()));
         connect(panel, SIGNAL(panelUpdate()), this, SLOT(updatePanel()));
+        connect(this, SIGNAL(toggleCoordinates(bool)), panel, SLOT(updateDMS(bool)));
 
         panel->updatePaths(trajectory);
     }

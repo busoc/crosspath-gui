@@ -5,6 +5,7 @@
 #include "reader.h"
 #include "points.h"
 #include "datetimedelegate.h"
+#include "dhmdelegate.h"
 #include "areadialog.h"
 
 CrossingPanel::CrossingPanel(QWidget *parent) :
@@ -60,12 +61,19 @@ void CrossingPanel::setupCrossing()
     ui->crossing->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
 
-void CrossingPanel::updateComponents()
+void CrossingPanel::updateComponents(bool dhm)
 {
-    ui->north->setText(QString::number(area.north()));
-    ui->south->setText(QString::number(area.south()));
-    ui->west->setText(QString::number(area.west()));
-    ui->east->setText(QString::number(area.east()));
+    QString north = !dhm ? QString::number(area.north()) : toDMS(area.north());
+    ui->north->setText(north);
+
+    QString south = !dhm ? QString::number(area.south()) : toDMS(area.south());
+    ui->south->setText(south);
+
+    QString west = !dhm ? QString::number(area.west()) : toDMS(area.west());
+    ui->west->setText(west);
+
+    QString east = !dhm ? QString::number(area.east()) : toDMS(area.east());
+    ui->east->setText(east);
 
     ui->from->setText(area.dtstart.toString("yyyy-MM-dd hh:mm:ss"));
     ui->to->setText(area.dtend.toString("yyyy-MM-dd hh:mm:ss"));
@@ -106,6 +114,23 @@ void CrossingPanel::removeRequested()
     {
         stopWorker();
         emit panelClose();
+    }
+}
+
+void CrossingPanel::updateDMS(bool dhm)
+{
+    updateComponents(dhm);
+    if (dhm)
+    {
+        ui->crossing->setItemDelegateForColumn(0, new DMSDelegate(this));
+        ui->crossing->setItemDelegateForColumn(1, new DMSDelegate(this));
+        ui->crossing->setItemDelegateForColumn(3, new DMSDelegate(this));
+        ui->crossing->setItemDelegateForColumn(4, new DMSDelegate(this));
+    } else {
+        ui->crossing->setItemDelegateForColumn(0, nullptr);
+        ui->crossing->setItemDelegateForColumn(1, nullptr);
+        ui->crossing->setItemDelegateForColumn(3, nullptr);
+        ui->crossing->setItemDelegateForColumn(4, nullptr);
     }
 }
 

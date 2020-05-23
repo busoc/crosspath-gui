@@ -129,6 +129,14 @@
     <string>Ctrl+Shift+F</string>
    </property>
   </action>
+  <action name="actionDHM">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>DMS</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

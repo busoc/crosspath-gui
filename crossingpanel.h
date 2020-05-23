@@ -38,6 +38,7 @@ public slots:
     void pathFound(Path p);
     void removeRequested();
     void editRequested();
+    void updateDMS(bool dhm);
 
 private slots:
     void workerFinished();
@@ -49,7 +50,7 @@ private:
     bool running = false;
     Area area;
 
-    void updateComponents();
+    void updateComponents(bool dhm = false);
     void setupCrossing();
     void stopWorker();
 };
