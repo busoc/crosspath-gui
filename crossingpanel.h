@@ -79,12 +79,15 @@ public:
             {
 
                 Point last = first;
+                Point prev;
                 while(!reader->done())
                 {
                     if (!area.accept(last))
                     {
+                        last = prev;
                         break;
                     }
+                    prev = last;
                     last = getPoint(reader->read());
                 }
                 Path p(first, last);

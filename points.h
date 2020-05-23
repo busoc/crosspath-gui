@@ -90,9 +90,13 @@ struct Area {
 
         bool both = !day && !night;
         if (!both) {
-            both = (p.eclipse && !night) || (!p.eclipse && !day);
+            if (night) {
+                both = p.eclipse;
+            }
+            if (day) {
+                both = !p.eclipse;
+            }
         }
-
         return pd && ns && ew && both;
     }
 };

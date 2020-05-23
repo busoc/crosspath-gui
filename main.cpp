@@ -8,6 +8,8 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     qRegisterMetaType<Path>();
 
+    QLocale::setDefault(QLocale(QLocale::English, QLocale::UnitedStates));
+
     MainWindow w;
     w.show();
     return a.exec();
