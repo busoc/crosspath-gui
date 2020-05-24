@@ -18,8 +18,8 @@
   </property>
   <property name="font">
    <font>
-    <family>Liberation Sans</family>
-    <pointsize>9</pointsize>
+    <family>Calibri</family>
+    <pointsize>10</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -79,7 +79,7 @@
              <widget class="QToolButton" name="menu">
               <property name="font">
                <font>
-                <family>Liberation Sans</family>
+                <family>Calibri</family>
                 <pointsize>10</pointsize>
                </font>
               </property>
@@ -142,8 +142,8 @@
               </property>
               <property name="font">
                <font>
-                <family>Liberation Sans</family>
-                <pointsize>9</pointsize>
+                <family>Calibri</family>
+                <pointsize>10</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -186,8 +186,8 @@
               </property>
               <property name="font">
                <font>
-                <family>Liberation Sans</family>
-                <pointsize>9</pointsize>
+                <family>Calibri</family>
+                <pointsize>10</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -230,8 +230,8 @@
               </property>
               <property name="font">
                <font>
-                <family>Liberation Sans</family>
-                <pointsize>9</pointsize>
+                <family>Calibri</family>
+                <pointsize>10</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -274,8 +274,8 @@
               </property>
               <property name="font">
                <font>
-                <family>Liberation Sans</family>
-                <pointsize>9</pointsize>
+                <family>Calibri</family>
+                <pointsize>10</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -318,8 +318,8 @@
               </property>
               <property name="font">
                <font>
-                <family>Liberation Sans</family>
-                <pointsize>9</pointsize>
+                <family>Calibri</family>
+                <pointsize>10</pointsize>
                </font>
               </property>
               <property name="alignment">
@@ -343,8 +343,8 @@
               </property>
               <property name="font">
                <font>
-                <family>Liberation Sans</family>
-                <pointsize>9</pointsize>
+                <family>Calibri</family>
+                <pointsize>10</pointsize>
                </font>
               </property>
               <property name="text">
@@ -368,8 +368,8 @@
               </property>
               <property name="font">
                <font>
-                <family>Liberation Sans</family>
-                <pointsize>9</pointsize>
+                <family>Calibri</family>
+                <pointsize>10</pointsize>
                </font>
               </property>
               <property name="alignment">

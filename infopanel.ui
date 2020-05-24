@@ -10,6 +10,12 @@
     <height>655</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Calibri</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -26,7 +32,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QDateTimeEdit" name="dtstart"/>
+        <widget class="QDateTimeEdit" name="dtstart">
+         <property name="displayFormat">
+          <string>yyyy/MM/dd HH:mm:ss</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_4">
@@ -36,7 +46,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QDateTimeEdit" name="dtend"/>
+        <widget class="QDateTimeEdit" name="dtend">
+         <property name="displayFormat">
+          <string>yyyy/MM/dd HH:mm:ss</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>

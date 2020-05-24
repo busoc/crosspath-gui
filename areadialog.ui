@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>460</width>
-    <height>278</height>
+    <height>294</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,8 +24,8 @@
   </property>
   <property name="font">
    <font>
-    <family>Liberation Sans</family>
-    <pointsize>9</pointsize>
+    <family>Calibri</family>
+    <pointsize>10</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -41,10 +41,16 @@
       <layout class="QFormLayout" name="formLayout">
        <item row="0" column="0">
         <widget class="QLabel" name="label_7">
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -56,18 +62,24 @@
         <widget class="QLineEdit" name="area">
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_6">
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -79,8 +91,8 @@
         <widget class="QDoubleSpinBox" name="latitude">
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="decimals">
@@ -99,10 +111,16 @@
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_1">
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -114,8 +132,8 @@
         <widget class="QDoubleSpinBox" name="longitude">
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="decimals">
@@ -131,10 +149,16 @@
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="label">
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -146,8 +170,8 @@
         <widget class="QDoubleSpinBox" name="margin">
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="decimals">
@@ -163,10 +187,16 @@
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_3">
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -178,8 +208,8 @@
         <widget class="QDateTimeEdit" name="dtstart">
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="dateTime">
@@ -233,10 +263,16 @@
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -248,8 +284,8 @@
         <widget class="QDateTimeEdit" name="dtend">
          <property name="font">
           <font>
-           <family>Liberation Sans</family>
-           <pointsize>9</pointsize>
+           <family>Calibri</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="date">
@@ -280,7 +316,7 @@
           </datetime>
          </property>
          <property name="displayFormat">
-          <string>yyyy/MM/ddHH:mm:ss</string>
+          <string>yyyy/MM/dd HH:mm:ss</string>
          </property>
         </widget>
        </item>
@@ -290,8 +326,8 @@
           <widget class="QRadioButton" name="both">
            <property name="font">
             <font>
-             <family>Liberation Sans</family>
-             <pointsize>9</pointsize>
+             <family>Calibri</family>
+             <pointsize>10</pointsize>
             </font>
            </property>
            <property name="text">
@@ -306,8 +342,8 @@
           <widget class="QRadioButton" name="nightOnly">
            <property name="font">
             <font>
-             <family>Liberation Sans</family>
-             <pointsize>9</pointsize>
+             <family>Calibri</family>
+             <pointsize>10</pointsize>
             </font>
            </property>
            <property name="text">
@@ -325,8 +361,8 @@
           <widget class="QRadioButton" name="dayOnly">
            <property name="font">
             <font>
-             <family>Liberation Sans</family>
-             <pointsize>9</pointsize>
+             <family>Calibri</family>
+             <pointsize>10</pointsize>
             </font>
            </property>
            <property name="text">
