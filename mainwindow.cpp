@@ -128,10 +128,18 @@ void MainWindow::readSettings()
     }
     settings.endArray();
 
-    history = settings.value("history").toStringList();
-    if (history.size() > 0 && history[0] != trajectory)
+    QStringList list = settings.value("history").toStringList();
+    if (list.size() > 0 && list[0] != trajectory)
     {
-        history.prepend(trajectory);
+        list.prepend(trajectory);
+    }
+    for (int i = 0; i < list.size(); i++)
+    {
+        QFileInfo fi = QFileInfo(list[i]);
+        if (fi.exists())
+        {
+            history.append(list[i]);
+        }
     }
 
     if (!trajectory.isEmpty())
