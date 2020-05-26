@@ -25,7 +25,6 @@ signals:
     void panelUpdate();
 
 public:
-    explicit CrossingPanel(QWidget *parent = nullptr);
     explicit CrossingPanel(Area a, QWidget *parent = nullptr);
     ~CrossingPanel();
 

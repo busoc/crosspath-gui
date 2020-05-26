@@ -11,7 +11,7 @@ StatsDialog::StatsDialog(QString file, QWidget *parent) :
     ui->setupUi(this);
     setSizeGripEnabled(false);
 
-    connect(this, SIGNAL(finished(int)), this, SLOT(closeDialog(int)));
+    connect(this, &StatsDialog::finished, this, &StatsDialog::closeDialog);
 
     eclipse = new InfoPanel(file, 5, this);
     saa = new InfoPanel(file, 6, this);

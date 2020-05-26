@@ -8,16 +8,6 @@
 #include "dhmdelegate.h"
 #include "areadialog.h"
 
-CrossingPanel::CrossingPanel(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::CrossingPanel)
-{
-    ui->setupUi(this);
-    ui->menu->addAction(ui->actionEdit);
-    ui->menu->addAction(ui->actionRem);
-    ui->progress->hide();
-}
-
 CrossingPanel::CrossingPanel(Area a, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::CrossingPanel),
@@ -28,15 +18,14 @@ CrossingPanel::CrossingPanel(Area a, QWidget *parent) :
     setupCrossing();
     ui->menu->addAction(ui->actionEdit);
     ui->menu->addAction(ui->actionRefresh);
-
     ui->menu->addAction(ui->actionRem);
 
 
     updateComponents();
 
-    connect(ui->actionRem, SIGNAL(triggered()), this, SLOT(removeRequested()));
-    connect(ui->actionEdit, SIGNAL(triggered()), this, SLOT(editRequested()));
-    connect(ui->actionRefresh, SIGNAL(triggered()), this, SLOT(refreshRequested()));
+    connect(ui->actionRem, &QAction::triggered, this, &CrossingPanel::removeRequested);
+    connect(ui->actionEdit, &QAction::triggered, this, &CrossingPanel::editRequested);
+    connect(ui->actionRefresh, &QAction::triggered, this, &CrossingPanel::refreshRequested);
 }
 
 CrossingPanel::~CrossingPanel()
@@ -167,8 +156,8 @@ void CrossingPanel::updatePaths(QString file)
     ui->progress->setRange(0, 0);
 
     worker = new CrossingThread(area, file, this);
-    connect(worker, SIGNAL(finished()), this, SLOT(workerFinished()));
-    connect(worker, SIGNAL(pathFound(const Path&)), this, SLOT(pathFound(const Path&)));
+    connect(worker, &CrossingThread::finished, this, &CrossingPanel::workerFinished);
+    connect(worker, &CrossingThread::pathFound, this, &CrossingPanel::pathFound);
     worker->start();
     running = true;
 }

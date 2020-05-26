@@ -7,24 +7,24 @@ InfoPanel::InfoPanel(QString file, int index, QWidget *parent) :
     ui(new Ui::InfoPanel)
 {
     ui->setupUi(this);
-    ui->view->setSelectionBehavior(QAbstractItemView::SelectRows);
-    ui->view->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     model = new PathTableModel;
     proxy = new DateTimeFilterProxyModel(this);
     proxy->setSourceModel(model);
     ui->view->setModel(proxy);
+    ui->view->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->view->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->view->setAlternatingRowColors(true);
     ui->view->setItemDelegateForColumn(0, new DateTimeDelegate);
     ui->view->setItemDelegateForColumn(1, new DateTimeDelegate);
 
     worker = new TrajectoryThread(file, index, this);
-    connect(worker, SIGNAL(pathFound(Path)), this, SLOT(pathFound(Path)));
-    connect(worker, SIGNAL(pathDetail(double, double)), this, SLOT(detailFound(double, double)));
+    connect(worker, &TrajectoryThread::pathFound, this, &InfoPanel::pathFound);
+    connect(worker, &TrajectoryThread::pathDetail, this, &InfoPanel::detailFound);
     worker->start();
 
-    connect(ui->dtstart, SIGNAL(dateTimeChanged(const QDateTime&)), this, SLOT(dtstartChanged(const QDateTime&)));
-    connect(ui->dtend, SIGNAL(dateTimeChanged(const QDateTime&)), this, SLOT(dtendChanged(const QDateTime&)));
+    connect(ui->dtstart, &QDateTimeEdit::dateTimeChanged, this, &InfoPanel::dtstartChanged);
+    connect(ui->dtend, &QDateTimeEdit::dateTimeChanged, this, &InfoPanel::dtendChanged);
 }
 
 InfoPanel::~InfoPanel()

@@ -28,7 +28,7 @@ public slots:
     void toggleFullscreen();
     void closePanel();
     void updatePanel();
-    void toggleCoordinates();
+    void toggleDMS();
 
 signals:
     void fileChanged(QString file);
@@ -43,6 +43,7 @@ private:
     void writeSettings();
     void setupMenus();
     void updateRecentFiles();
+    void createPanel(Area a);
 
     Ui::MainWindow *ui;
     QString trajectory;
